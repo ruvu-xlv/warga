@@ -188,7 +188,30 @@
   });
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/js/select2.min.js"></script>
+
+<!-- Load jQuery (pastikan sudah ada) -->
+<script src="<?= base_url('assets/kaiadmin/jquery.min.js') ?>"></script>
+
+<!-- Load Select2 dari folder dist -->
+<script src="<?= base_url('assets/kaiadmin/select2/dist/js/select2.min.js') ?>"></script>
+
+<!-- Untuk bahasa Indonesia (jika perlu) -->
+<script src="<?= base_url('assets/kaiadmin/select2/dist/js/i18n/id.js') ?>"></script>
+
+<script>
+$(document).ready(function() {
+    $('.select2').select2({
+        allowClear: true,
+        language: 'id' 
+    });
+    
+    $('.js-example-theme-multiple').select2({
+        theme: "classic",
+    });
+});
+</script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/js/select2.min.js"></script>
 <script>
   $(document).ready(function() {
     $('.select2').select2({
@@ -196,7 +219,7 @@
       allowClear: true
     });
   });
-</script>
+</script> -->
 
 <!-- Include QR Code library -->
 <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>

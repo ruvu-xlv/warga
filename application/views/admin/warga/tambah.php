@@ -138,7 +138,7 @@
                                 <div class="">
                                     <div class="form-group">
                                         <label>Nomor kartu keluarga</label><br />
-                                        <select class="form-control select2" name="nomor_kk">
+                                        <select class="form-control js-example-theme-multiple select2" name="nomor_kk">
                                             <option value="">-- Pilih Nomor Kartu Keluarga --</option>
                                             <?php foreach ($kartukeluarga as $kk): ?>
                                                 <option value="<?php echo $kk->nomor_kk; ?>"><?php echo $kk->nomor_kk; ?></option>

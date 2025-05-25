@@ -458,4 +458,48 @@ class Admin extends CI_Controller
             $this->load->view('layout/footer');
         }
     }
+
+    public function kegiatan_edit($id)
+    {
+        $where = ['id_kegiatan' => $id];
+        $data['kegiatan'] = $this->m_data->edit_data($where, 'kegiatan')->result();
+
+        $this->load->view('layout/header');
+        $this->load->view('admin/kegiatan/edit', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function kegiatan_update()
+    {
+        $this->form_validation->set_rules('nama_kegiatan', 'Nama Kegiatan', 'required|min_length[3]|max_length[100]');
+        $this->form_validation->set_rules('tanggal_kegiatan', 'Tanggal Kegiatan', 'required');
+        $this->form_validation->set_rules('waktu_kegiatan', 'Waktu Kegiatan', 'required');
+        $this->form_validation->set_rules('tempat_kegiatan', 'Tempat Kegiatan', 'required|min_length[5]');
+        $this->form_validation->set_rules('deskripsi_kegiatan', 'Deskripsi Kegiatan', 'required|min_length[5]');
+
+        if ($this->form_validation->run() == true) {
+            $id = $this->input->post('id_kegiatan');
+            $data = [
+                'nama_kegiatan' => $this->input->post('nama_kegiatan', true),
+                'tanggal_kegiatan' => $this->input->post('tanggal_kegiatan', true),
+                'waktu_kegiatan' => $this->input->post('waktu_kegiatan', true),
+                'tempat_kegiatan' => $this->input->post('tempat_kegiatan', true),
+                'deskripsi_kegiatan' => $this->input->post('deskripsi_kegiatan', true)
+            ];
+
+            $where = ['id_kegiatan' => $id];
+            $this->m_data->update_data($where, $data, 'kegiatan');
+            $this->session->set_flashdata('success', 'Data kegiatan berhasil diperbarui!');
+            redirect(base_url('admin/kegiatan'));
+        } else {
+            $id = $this->input->post('id_kegiatan');
+            $where = ['id_kegiatan' => $id];
+            $data['kegiatan'] = $this->m_data->edit_data($where, 'kegiatan')->result();
+
+            $this->session->set_flashdata('error', validation_errors());
+            $this->load->view('layout/header');
+            $this->load->view('admin/kegiatan/edit', $data);
+            $this->load->view('layout/footer');
+        }
+    }
 }

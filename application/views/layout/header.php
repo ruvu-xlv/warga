@@ -34,7 +34,8 @@
     });
   </script>
 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css" rel="stylesheet" />
+  <link href="<?= base_url('assets/kaiadmin/select2/dist/css/select2.min.css') ?>" rel="stylesheet">
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css" rel="stylesheet" /> -->
 
   <!-- CSS Files -->
   <link rel="stylesheet" href="<?php echo base_url() ?>assets/kaiadmin/assets/css/bootstrap.min.css" />
