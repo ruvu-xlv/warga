@@ -231,6 +231,13 @@ function downloadQR(nik, nama) {
 }
 </script>
 
+<!-- ckEditor -->
+ <script src="<?php echo base_url() ?>assets/kaiadmin/ckeditor/ckeditor.js"></script>
+	<script>
+	  $(function () {
+	    	CKEDITOR.replace('editor')
+	  });
+	</script>
 </body>
 
 </html>

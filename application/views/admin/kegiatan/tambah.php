@@ -25,7 +25,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                <div class="card">git commit -m "first commit"
+                <div class="card">
                     <div class="card-header">
                         <div class="card-title">Tambah Kegiatan</div>
                     </div>
@@ -70,7 +70,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="largeInput">Deskripsi Kegiatan</label>
-                                        <textarea type="text" class="form-control form-control" name="deskripsi_kegiatan"
+                                        <textarea type="text" id="editor" class="form-control form-control" name="deskripsi_kegiatan"
                                             placeholder="Masukkan nama kegiatan..."></textarea>
                                         <?php echo form_error('deskripsi_kegiatan'); ?>
                                     </div>
