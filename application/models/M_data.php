@@ -38,10 +38,4 @@ class M_data extends CI_Model
 		$this->db->delete($table, $where);
 	}
 
-	public function getByNomorKK($nomor_kk)
-	{
-		$this->db->where('nomor_kk', $nomor_kk);
-		$query = $this->db->get('kk');
-		return $query->row(); // Mengembalikan satu baris data atau null jika tidak ditemukan
-	}
 }

@@ -72,9 +72,9 @@
                     <td>
                       <div class="form-button-action">
 
-                        <a href="<?php echo base_url() . 'admin/warga_edit/' . $k->id_kegiatan; ?>" class="btn btn-link btn-primary btn-lg"><i class="fa fa-edit"></i></a>
-                        <a href="<?php echo base_url() . 'admin/warga_show/' . $k->id_kegiatan; ?>" class="btn btn-link btn-info"><i class="fa fa-eye"></i></a>
-                        <a href="<?php echo base_url().'admin/warga_destroy/'.$k->id_kegiatan; ?>" class="btn btn-link btn-danger"><i class="fa fa-times"></i></a>
+                        <a href="<?php echo base_url() . 'admin/kegiatan_edit/' . $k->id_kegiatan; ?>" class="btn btn-link btn-primary btn-lg"><i class="fa fa-edit"></i></a>
+                        <a href="<?php echo base_url() . 'admin/kegiatan_show/' . $k->id_kegiatan; ?>" class="btn btn-link btn-info"><i class="fa fa-eye"></i></a>
+                        <a href="<?php echo base_url().  'admin/kegiatan_destroy/'.$k->id_kegiatan; ?>" class="btn btn-link btn-danger"><i class="fa fa-times"></i></a>
                       </div>
                     </td>
                   </tr>
